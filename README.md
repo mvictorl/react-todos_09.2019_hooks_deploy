@@ -1,4 +1,27 @@
-# Created by Youtube-video course ["React JS"](https://youtu.be/V1rhxheJg4A) of Vladilen Minin
+## Created by Youtube-video course ["React JS"](https://youtu.be/V1rhxheJg4A) of Vladilen Minin
+
+
+1. Установка дополнительных пакетов:
+```
+> yarn add node-sass react-router-dom bootstrap axios
+```
+2. Удаление App.css, App.test.js, logo.svg
+3. Переименование index.css в index.scss
+4. Добавление в index.scss (SASS) импорта bootstrap:
+```
+@import "~bootstrap/scss/bootstrap";
+```
+5. В App.js добавить функционал многостраничности:
+```
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+```
+6. 
+
+
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
