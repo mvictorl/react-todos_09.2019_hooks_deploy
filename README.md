@@ -1,3 +1,5 @@
+# Created by Youtube-video course ["React JS"](https://youtu.be/V1rhxheJg4A) of Vladilen Minin
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
