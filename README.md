@@ -11,11 +11,12 @@
 ```
 @import "~bootstrap/scss/bootstrap";
 ```
-5. В App.js добавить функционал многостраничности:
+5. Добавление в App.js функционала "многостраничности":
 ```
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 ```
-6. 
+6. Создание папки *pages* с компонентами-страницами Home.js и About.js
+7. Создание папки *components* с компонентами Notes.js, Navbar.js, Form.js
 
 
 
