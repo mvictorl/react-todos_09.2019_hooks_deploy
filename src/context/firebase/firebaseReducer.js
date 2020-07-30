@@ -12,9 +12,9 @@ const handlers = {
     ...state,
     notes: [...state.notes, payload]
   }),
-  [REMOVE_NOTE]: (state, id) => ({
+  [REMOVE_NOTE]: (state, {payload}) => ({
     ...state,
-    note: state.notes.filter(note => note.id === id)
+    notes: state.notes.filter(note => note.id !== payload)
   }),
   DEFAULT: state => state
 }
