@@ -19,6 +19,9 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 7. Создание папки *components* с компонентами Notes.js, Navbar.js, Form.js
 
 
+99. Установка пакета `react-transition-group` для добавления анимации
+
+
 
 
 

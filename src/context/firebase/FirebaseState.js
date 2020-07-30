@@ -28,15 +28,13 @@ export const FirebaseState = ({ children }) => {
     try {
       showLoader()
       const res = await axios.get(`${url}/notes.json`)
-      if (res.data) {
-        const payload = Object.keys(res.data).map((key) => {
-          return {
-            ...res.data[key],
-            id: key,
-          }
-        })
-        dispatch({ type: FETCH_NOTES, payload })
-      }
+      const payload = Object.keys(res.data || {}).map((key) => {
+        return {
+          ...res.data[key],
+          id: key,
+        }
+      })
+      dispatch({ type: FETCH_NOTES, payload })
     } catch (e) {
       throw new Error(e.message)
     } finally {
@@ -50,7 +48,7 @@ export const FirebaseState = ({ children }) => {
       date: new Date().toJSON(),
     }
     try {
-      showLoader()
+      // showLoader()
       const res = await axios.post(`${url}/notes.json`, note)
       const payload = {
         ...note,
@@ -60,15 +58,12 @@ export const FirebaseState = ({ children }) => {
     } catch (e) {
       throw new Error(e.message)
     } finally {
-      hideLoader()
+      // hideLoader()
     }
-
-    // dispatch({type: ADD_NOTE, note})
   }
 
   const removeNote = async (id) => {
     try {
-      showLoader()
       await axios.delete(`${url}/notes/${id}.json`)
       dispatch({
         type: REMOVE_NOTE,
@@ -77,7 +72,6 @@ export const FirebaseState = ({ children }) => {
     } catch (e) {
       throw new Error(e.message)
     } finally {
-      hideLoader()
     }
   }
 
